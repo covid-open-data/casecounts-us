@@ -1,0 +1,5 @@
+name: 'GIT Push'
+description: 'Pushes output changes back to master.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

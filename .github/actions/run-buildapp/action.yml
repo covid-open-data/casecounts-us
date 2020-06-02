@@ -1,0 +1,11 @@
+name: 'Run Build App'
+description: 'Runs the app builder.'
+inputs:
+  buildapp-command:
+    description: 'The command to execute the app builder.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.buildapp-command }}

@@ -1,0 +1,21 @@
+#on:
+#  schedule:
+#  - cron: "*/5 * * * *"
+
+# For testing, use the star action in GitHub to trigger the action.
+# TODO: Remove this after testing.
+on:
+  watch:
+    types: [started]
+
+jobs:
+  run-buildapp:
+    runs-on: ubuntu-latest
+    name: Run Transformer
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run buildapp
+        uses: ./.github/actions/run-buildapp
+        with:
+          buildapp-command: '${GITHUB_WORKSPACE}/src/buildapp.sh'
