@@ -14,6 +14,8 @@ installAptPackages r-cran-tidyverse
 # installAptPackages r-cran-autocogs
 # installAptPackages r-cran-DistributionUtils
 
+npm install netlify-cli -g
+
 R -e "remotes::install_github('hafen/trelliscopejs@new-features')"
 R -e "remotes::install_github('covid-open-data/geoutils')"
 R -e "remotes::install_github('covid-open-data/geocard')"
