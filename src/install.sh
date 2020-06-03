@@ -14,6 +14,9 @@ installAptPackages r-cran-tidyverse
 # installAptPackages r-cran-autocogs
 # installAptPackages r-cran-DistributionUtils
 
+installAptPackages nodejs
+installAptPackages npm
+
 npm install netlify-cli -g
 
 R -e "remotes::install_github('hafen/trelliscopejs@new-features')"
