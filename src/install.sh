@@ -14,9 +14,9 @@ installAptPackages r-cran-tidyverse
 # installAptPackages r-cran-autocogs
 # installAptPackages r-cran-DistributionUtils
 
-R -e "remotes::install_github('hafen/trelliscopejs@new-features', dependencies = FALSE)"
-R -e "remotes::install_github('covid-open-data/geoutils', dependencies = FALSE)"
-R -e "remotes::install_github('covid-open-data/geocard', dependencies = FALSE)"
-R -e "remotes::install_github('covid-open-data/casecountapp', dependencies = FALSE)"
+R -e "remotes::install_github('hafen/trelliscopejs@new-features')"
+R -e "remotes::install_github('covid-open-data/geoutils')"
+R -e "remotes::install_github('covid-open-data/geocard')"
+R -e "remotes::install_github('covid-open-data/casecountapp')"
 
 exit 0
