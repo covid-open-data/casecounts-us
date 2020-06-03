@@ -76,22 +76,22 @@ state_display <- build_casecount_display(
   thumb = system.file("thumbs/US/states.png", package = "casecountapp")
 )
 
-# county_display <- build_casecount_display(
-#   app,
-#   sources = sources_county,
-#   ref_source = "NYT",
-#   name = "Counties",
-#   desc = paste0("Covid-19 cases and deaths in the US by county - updated ",
-#     time_str),
-#   views = default_views(
-#     ref_source = "NYT", comp_sources = c("JHU", "FACTS"), entity_pl = "states"),
-#   state = list(
-#     sort = list(trelliscopejs::sort_spec("cur_case_nyt", dir = "desc")),
-#     labels = list(), sidebar = 4),
-#   append_higher_admin_name = TRUE,
-#   order = 3,
-#   case_fatality_max = 12,
-#   thumb = system.file("thumbs/US/counties.png", package = "casecountapp")
-# )
+county_display <- build_casecount_display(
+  app,
+  sources = sources_county,
+  ref_source = "NYT",
+  name = "Counties",
+  desc = paste0("Covid-19 cases and deaths in the US by county - updated ",
+    time_str),
+  views = default_views(
+    ref_source = "NYT", comp_sources = c("JHU", "FACTS"), entity_pl = "states"),
+  state = list(
+    sort = list(trelliscopejs::sort_spec("cur_case_nyt", dir = "desc")),
+    labels = list(), sidebar = 4),
+  append_higher_admin_name = TRUE,
+  order = 3,
+  case_fatality_max = 12,
+  thumb = system.file("thumbs/US/counties.png", package = "casecountapp")
+)
 
 deploy_netlify(app, Sys.getenv("NETLIFY_APP_ID"))
