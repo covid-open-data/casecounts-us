@@ -5,14 +5,14 @@ source "${GITHUB_WORKSPACE}/.github/scripts/shutils.sh"
 ###############################################################################
 
 installAptPackages r-cran-tidyverse
-installAptPackages r-cran-ggthemes
-installAptPackages r-cran-isoband
-installAptPackages r-cran-checkmate
-installAptPackages r-cran-diptest
-installAptPackages r-cran-mclust
-installAptPackages r-cran-webshot
-installAptPackages r-cran-autocogs
-installAptPackages r-cran-DistributionUtils
+# installAptPackages r-cran-ggthemes
+# installAptPackages r-cran-isoband
+# installAptPackages r-cran-checkmate
+# installAptPackages r-cran-diptest
+# installAptPackages r-cran-mclust
+# installAptPackages r-cran-webshot
+# installAptPackages r-cran-autocogs
+# installAptPackages r-cran-DistributionUtils
 
 R -e "remotes::install_github('hafen/trelliscopejs@new-features', dependencies = FALSE)"
 R -e "remotes::install_github('covid-open-data/geoutils', dependencies = FALSE)"
