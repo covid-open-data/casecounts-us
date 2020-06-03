@@ -17,5 +17,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Run buildapp
         uses: ./.github/actions/run-buildapp
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
         with:
           buildapp-command: '${GITHUB_WORKSPACE}/src/buildapp.sh'
