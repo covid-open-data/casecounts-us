@@ -1,6 +1,6 @@
 version: '2'
 services:
-  buildapp_runner:
+  runner:
     build: .
     environment:
       - GITHUB_WORKSPACE=/github/workspace

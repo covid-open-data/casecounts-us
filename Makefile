@@ -3,8 +3,7 @@
 ###############################################################################
 .PHONY: run-workflow
 run-workflow:
-	make run-buildapp
-	make run-git-push
+	make run-buildapp && make run-git-push
 
 
 ###############################################################################
@@ -12,17 +11,17 @@ run-workflow:
 ###############################################################################
 .PHONY: run-buildapp
 run-buildapp:
-	cd .github/actions/run-buildapp; make dc-up; cd -
+	make -C .github/actions/run-buildapp dc-up
 
 
 .PHONY: run-buildapp-build
 run-buildapp-build:
-	cd .github/actions/run-buildapp; make dc-up-build; cd -
+	make -C .github/actions/run-buildapp dc-up-build
 
 
 .PHONY: run-buildapp-build-no-cache
 run-buildapp-build-no-cache:
-	cd .github/actions/run-buildapp; make dc-build-no-cache; cd -
+	make -C .github/actions/run-buildapp dc-build-no-cache
 
 
 ###############################################################################
@@ -30,15 +29,15 @@ run-buildapp-build-no-cache:
 ###############################################################################
 .PHONY: run-git-push
 run-git-push:
-	cd .github/actions/git-push; make dc-up; cd -
+	make -C .github/actions/git-push dc-up
 
 
 .PHONY: run-git-push-build
 run-git-push-build:
-	cd .github/actions/git-push; make dc-up-build; cd -
+	make -C .github/actions/git-push dc-up-build
 
 
 .PHONY: run-git-push-build-no-cache
 run-git-push-build-no-cache:
-	cd .github/actions/git-push; make dc-build-no-cache; cd -
+	make -C .github/actions/git-push dc-build-no-cache
 

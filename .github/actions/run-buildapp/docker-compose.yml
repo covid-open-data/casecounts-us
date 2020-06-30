@@ -1,6 +1,6 @@
 version: '2'
 services:
-  buildapp_runner:
+  runner:
     build: .
     command: '$${GITHUB_WORKSPACE}/src/buildapp.sh'
     environment:
