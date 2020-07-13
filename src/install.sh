@@ -4,7 +4,7 @@ source "${GITHUB_WORKSPACE}/.github/scripts/shutils.sh"
 # Install buildapp specific dependencies.
 ###############################################################################
 
-installAptPackages r-cran-tidyverse
+# installAptPackages r-cran-tidyverse
 # installAptPackages r-cran-ggthemes
 # installAptPackages r-cran-isoband
 # installAptPackages r-cran-checkmate
@@ -23,5 +23,6 @@ R -e "remotes::install_github('hafen/trelliscopejs@new-features', upgrade = FALS
 R -e "remotes::install_github('covid-open-data/geoutils', upgrade = FALSE)"
 R -e "remotes::install_github('covid-open-data/geocard', upgrade = FALSE)"
 R -e "remotes::install_github('covid-open-data/casecountapp', upgrade = FALSE)"
+
 
 exit 0
