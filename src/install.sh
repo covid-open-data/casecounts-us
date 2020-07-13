@@ -19,9 +19,9 @@ installAptPackages npm
 
 npm install netlify-cli -g
 
-R -e "remotes::install_github('hafen/trelliscopejs@new-features')"
-R -e "remotes::install_github('covid-open-data/geoutils')"
-R -e "remotes::install_github('covid-open-data/geocard')"
-R -e "remotes::install_github('covid-open-data/casecountapp')"
+R -e "remotes::install_github('hafen/trelliscopejs@new-features', upgrade = FALSE)"
+R -e "remotes::install_github('covid-open-data/geoutils', upgrade = FALSE)"
+R -e "remotes::install_github('covid-open-data/geocard', upgrade = FALSE)"
+R -e "remotes::install_github('covid-open-data/casecountapp', upgrade = FALSE)"
 
 exit 0
