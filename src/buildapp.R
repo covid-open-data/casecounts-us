@@ -30,7 +30,7 @@ sources_county <- list(
 timestamp <- Sys.time()
 time_str <- format(timestamp, "%Y-%m-%d %H:%M %Z", tz = "UTC")
 
-dir.create("dist", showWarning = FALSE)
+dir.create("docs", showWarning = FALSE)
 app <- register_app("US-Covid19", path = "docs")
 
 country_display <- build_casecount_display(
