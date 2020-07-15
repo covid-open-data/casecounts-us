@@ -30,7 +30,7 @@ sources_county <- list(
 timestamp <- Sys.time()
 time_str <- format(timestamp, "%Y-%m-%d %H:%M %Z", tz = "UTC")
 
-app <- register_app("US-Covid19")
+app <- register_app("US-Covid19", path = "docs")
 
 country_display <- build_casecount_display(
   app,
@@ -46,6 +46,7 @@ country_display <- build_casecount_display(
     ref_level = "states",
     type = "href"
   )),
+  # max_date = as.Date("2020-06-17"),
   order = 1,
   nrow = 1,
   ncol = 1,
@@ -72,6 +73,7 @@ state_display <- build_casecount_display(
     type = "href"
   )),
   order = 2,
+  # max_date = as.Date("2020-06-17"),
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/states.png", package = "casecountapp")
 )
@@ -90,8 +92,9 @@ county_display <- build_casecount_display(
     labels = list(), sidebar = 4),
   append_higher_admin_name = TRUE,
   order = 3,
+  # max_date = as.Date("2020-06-17"),
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/counties.png", package = "casecountapp")
 )
 
-deploy_netlify(app, Sys.getenv("NETLIFY_APP_ID"))
+# deploy_netlify(app, Sys.getenv("NETLIFY_APP_ID"))
