@@ -31,7 +31,7 @@ timestamp <- Sys.time()
 time_str <- format(timestamp, "%Y-%m-%d %H:%M %Z", tz = "UTC")
 
 dir.create("dist", showWarning = FALSE)
-app <- register_app("US-Covid19", path = "dist")
+app <- register_app("US-Covid19", path = "docs")
 
 country_display <- build_casecount_display(
   app,
