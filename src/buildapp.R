@@ -30,7 +30,8 @@ sources_county <- list(
 timestamp <- Sys.time()
 time_str <- format(timestamp, "%Y-%m-%d %H:%M %Z", tz = "UTC")
 
-app <- register_app("US-Covid19")
+dir.create("dist", showWarning = FALSE)
+app <- register_app("US-Covid19", path = "dist")
 
 country_display <- build_casecount_display(
   app,
@@ -94,4 +95,4 @@ county_display <- build_casecount_display(
   thumb = system.file("thumbs/US/counties.png", package = "casecountapp")
 )
 
-deploy_netlify(app, Sys.getenv("NETLIFY_APP_ID"))
+# deploy_netlify(app, Sys.getenv("NETLIFY_APP_ID"))
