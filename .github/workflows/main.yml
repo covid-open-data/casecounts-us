@@ -1,12 +1,8 @@
-#on:
+on:
+  workflow_dispatch:
+    inputs:
 #  schedule:
 #  - cron: "*/5 * * * *"
-
-# For testing, use the star action in GitHub to trigger the action.
-# TODO: Remove this after testing.
-on:
-  watch:
-    types: [started]
 
 jobs:
   run-buildapp:
