@@ -2,12 +2,12 @@ __loadDisplayList__8290dcb6([
   {
     "group": "common",
     "name": "Counties",
-    "desc": "Covid-19 cases and deaths in the US by county - updated 2020-07-16 16:41 UTC",
+    "desc": "Covid-19 cases and deaths in the US by county - updated 2020-07-16 17:01 UTC",
     "n": 3096,
     "order": 3,
     "height": 416,
     "width": 500,
-    "updated": "2020-07-16 16:53:27",
+    "updated": "2020-07-16 17:14:28",
     "keySig": "66743b6c51769df6df9c355482fc887d"
   },
   {
@@ -18,7 +18,7 @@ __loadDisplayList__8290dcb6([
     "order": 2,
     "height": 416,
     "width": 500,
-    "updated": "2020-07-16 16:41:42",
+    "updated": "2020-07-16 17:01:49",
     "keySig": "c0f1951a4a12941719c7499b69c2ec0a"
   },
   {
@@ -29,7 +29,7 @@ __loadDisplayList__8290dcb6([
     "order": 1,
     "height": 416,
     "width": 500,
-    "updated": "2020-07-16 16:41:29",
+    "updated": "2020-07-16 17:01:35",
     "keySig": "9c87051166d3e9a4dbc8368ef91696ae"
   }
 ])
