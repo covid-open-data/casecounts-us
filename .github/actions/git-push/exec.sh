@@ -22,7 +22,7 @@ execOrExit chmod -R a+rw "${ABS_PUSH_DIR}"
 execOrExit git config --global user.email "${GIT_EMAIL}"
 execOrExit git config --global user.name "${GIT_NAME}"
 
-if $(git status . | grep -q "Changes not staged for commit"); then
+if $(git status . | grep -qE "(Changes not staged|Untracked files)"); then
   echo "Staging changes."
   execOrExit git add .
 fi
