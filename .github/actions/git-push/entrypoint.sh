@@ -4,6 +4,12 @@
 ###############################################################################
 export ACTION_DIR="${GITHUB_WORKSPACE}/.github/actions/git-push"
 source "${GITHUB_WORKSPACE}/.github/scripts/shutils.sh"
+export PUSH_DIR=$@
+
+if [ -z "${PUSH_DIR}" ]; then
+  echo "push-dir not provided, aborting."
+  exit 1
+fi
 
 if [ -z "${GIT_EMAIL}" ]; then
   echo "GIT_EMAIL not set, using SYSTEM@users.noreply.github.com."

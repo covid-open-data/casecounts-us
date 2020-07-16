@@ -3,12 +3,21 @@
 # Execution Script.
 ###############################################################################
 source "${GITHUB_WORKSPACE}/.github/scripts/shutils.sh"
-cd "${GITHUB_WORKSPACE}/output"
+ABS_PUSH_DIR="${GITHUB_WORKSPACE}/${PUSH_DIR}"
 
-# Open the permissions on all output files before committing otherwise these files
+if [ ! -d "${ABS_PUSH_DIR}" ]; then
+  echo "${ABS_PUSH_DIR} does not exist, aborting."
+  exit 1
+else
+  echo "Pushing directory: ${ABS_PUSH_DIR}"
+fi
+
+execOrExit cd "${ABS_PUSH_DIR}"
+
+# Open the permissions on all files before committing otherwise these files
 # will be owned by the root user that runs this action in docker. This will prevent
 # permissions issues when pulled locally for development.
-execOrExit chmod -R a+rw "${GITHUB_WORKSPACE}/output"
+execOrExit chmod -R a+rw "${ABS_PUSH_DIR}"
 
 execOrExit git config --global user.email "${GIT_EMAIL}"
 execOrExit git config --global user.name "${GIT_NAME}"
