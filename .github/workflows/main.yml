@@ -19,3 +19,18 @@ jobs:
           NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
         with:
           buildapp-command: '${GITHUB_WORKSPACE}/src/buildapp.sh'
+      - name: Git Push
+        uses: ./.github/actions/git-push
+        with:
+          push-dir: 'docs'
+      - name: Failure Notification
+        if: failure()
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "title": "GitHub Action FAILED",
+            "body": "This is an automated issue. See repo actions for details."
+            }'
