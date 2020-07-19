@@ -1,12 +1,9 @@
-#on:
-#  schedule:
-#  - cron: "*/5 * * * *"
-
-# For testing, use the star action in GitHub to trigger the action.
-# TODO: Remove this after testing.
+# Run every day at 3am Pacific
 on:
-  watch:
-    types: [started]
+  workflow_dispatch:
+    inputs:
+  schedule:
+    - cron: "* 10 * * *"
 
 jobs:
   run-buildapp:
