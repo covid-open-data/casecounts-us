@@ -32,6 +32,8 @@ time_str <- format(timestamp, "%Y-%m-%d %H:%M %Z", tz = "UTC")
 
 app <- register_app("US-Covid19", path = "docs")
 
+message("Creating country-level display...")
+
 country_display <- build_casecount_display(
   app,
   sources = sources_country,
@@ -53,6 +55,8 @@ country_display <- build_casecount_display(
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/country.png", package = "casecountapp")
 )
+
+message("Creating state-level display...")
 
 state_display <- build_casecount_display(
   app,
@@ -77,6 +81,8 @@ state_display <- build_casecount_display(
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/states.png", package = "casecountapp")
 )
+
+message("Creating county-level display...")
 
 county_display <- build_casecount_display(
   app,
