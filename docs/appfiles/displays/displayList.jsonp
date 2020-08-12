@@ -2,34 +2,34 @@ __loadDisplayList__8290dcb6([
   {
     "group": "common",
     "name": "Counties",
-    "desc": "Covid-19 cases and deaths in the US by county - updated 2020-08-11 10:13 UTC",
-    "n": 3120,
+    "desc": "Covid-19 cases and deaths in the US by county - updated 2020-08-12 10:13 UTC",
+    "n": 3122,
     "order": 3,
     "height": 416,
     "width": 500,
-    "updated": "2020-08-11 10:29:33",
-    "keySig": "ef7a8fbd98f73d53e642085441f1400d"
+    "updated": "2020-08-12 10:25:05",
+    "keySig": "5f93596fb687fff967685d5095a730a3"
   },
   {
     "group": "common",
     "name": "States",
-    "desc": "Covid-19 cases and deaths in the US by state - updated 2020-08-11 10:13 UTC",
+    "desc": "Covid-19 cases and deaths in the US by state - updated 2020-08-12 10:13 UTC",
     "n": 51,
     "order": 2,
     "height": 416,
     "width": 500,
-    "updated": "2020-08-11 10:13:41",
+    "updated": "2020-08-12 10:13:17",
     "keySig": "c0f1951a4a12941719c7499b69c2ec0a"
   },
   {
     "group": "common",
     "name": "United_States",
-    "desc": "Covid-19 cases and deaths in the US - updated 2020-08-11 10:13 UTC",
+    "desc": "Covid-19 cases and deaths in the US - updated 2020-08-12 10:13 UTC",
     "n": 1,
     "order": 1,
     "height": 416,
     "width": 500,
-    "updated": "2020-08-11 10:13:24",
+    "updated": "2020-08-12 10:13:05",
     "keySig": "9c87051166d3e9a4dbc8368ef91696ae"
   }
 ])
