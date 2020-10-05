@@ -49,6 +49,7 @@ country_display <- build_casecount_display(
     type = "href"
   )),
   # max_date = as.Date("2020-06-17"),
+  min_date = as.Date("2020-03-01"),
   order = 1,
   nrow = 1,
   ncol = 1,
@@ -78,6 +79,7 @@ state_display <- build_casecount_display(
   )),
   order = 2,
   # max_date = as.Date("2020-06-17"),
+  min_date = as.Date("2020-03-01"),
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/states.png", package = "casecountapp")
 )
@@ -99,6 +101,7 @@ county_display <- build_casecount_display(
   append_higher_admin_name = TRUE,
   order = 3,
   # max_date = as.Date("2020-06-17"),
+  min_date = as.Date("2020-03-01"),
   case_fatality_max = 12,
   thumb = system.file("thumbs/US/counties.png", package = "casecountapp")
 )
