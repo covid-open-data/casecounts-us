@@ -6,6 +6,14 @@ HTMLWidgets.widget({
       renderValue: function(x) {
         el.innerHTML = x.html;
         var factor = width / 500;
+
+        // add csv data to link
+        var link = el.getElementsByClassName("card-csv")[0];
+        var csvContent = "data:text/csv;charset=utf-8,date,cases,deaths,source\n";
+        csvContent += x.dat.map(e => e.date + "," + e.cases + "," + e.deaths + "," + e.source).join("\n");
+        link.setAttribute("href", encodeURI(csvContent));
+        link.setAttribute("download", x.plot_id + ".csv");
+
         var dt = el.getElementsByClassName("data-table")[0];
         dt.setAttribute("style", `transform: scale(${factor},${factor}) translateX(-50%); transform-origin: top left;`);
         var hgt = dt.offsetHeight * factor

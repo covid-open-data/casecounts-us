@@ -1,29 +1,29 @@
 suppressPackageStartupMessages(library(casecountapp))
 
-sources_country <- list(
-  list(source_id = "JHU", admin_level = 0,
+sources_country <- source_list(
+  source_entry(source_id = "JHU", admin_level = 0,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-jhu/master/output/admin0/US.csv"),
-  list(source_id = "NYT", admin_level = 0,
+  source_entry(source_id = "NYT", admin_level = 0,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-nytimes/master/output/admin0/US.csv"),
-  list(source_id = "FACTS", admin_level = 0,
+  source_entry(source_id = "FACTS", admin_level = 0,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-usafacts/master/output/admin0/US.csv")
 )
 
-sources_state <- list(
-  list(source_id = "JHU", admin_level = 1,
+sources_state <- source_list(
+  source_entry(source_id = "JHU", admin_level = 1,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-jhu/master/output/admin1/US.csv"),
-  list(source_id = "NYT", admin_level = 1,
+  source_entry(source_id = "NYT", admin_level = 1,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-nytimes/master/output/admin1/US.csv"),
-  list(source_id = "FACTS", admin_level = 1,
+  source_entry(source_id = "FACTS", admin_level = 1,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-usafacts/master/output/admin1/US.csv")
 )
 
-sources_county <- list(
-  list(source_id = "JHU", admin_level = 2,
+sources_county <- source_list(
+  source_entry(source_id = "JHU", admin_level = 2,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-jhu/master/output/admin2/US.csv"),
-  list(source_id = "NYT", admin_level = 2,
+  source_entry(source_id = "NYT", admin_level = 2,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-nytimes/master/output/admin2/US.csv"),
-  list(source_id = "FACTS", admin_level = 2,
+  source_entry(source_id = "FACTS", admin_level = 2,
     file = "https://raw.githubusercontent.com/covid-open-data/xform-casecount-us-usafacts/master/output/admin2/US.csv")
 )
 
@@ -41,13 +41,11 @@ country_display <- build_casecount_display(
   name = "United States",
   desc = paste0("Covid-19 cases and deaths in the US - updated ", time_str),
   state = list(labels = list("view_states")),
-  geo_links = list(list(
+  geo_links = geo_link_filter(
     display = "States",
     variable = "admin0_name",
-    cog_type = "cog_disp_filter",
-    ref_level = "states",
-    type = "href"
-  )),
+    ref_level = "states"
+  ),
   # max_date = as.Date("2020-06-17"),
   min_date = as.Date("2020-03-01"),
   order = 1,
@@ -70,13 +68,11 @@ state_display <- build_casecount_display(
   state = list(
     sort = list(trelliscopejs::sort_spec("cur_case_nyt", dir = "desc")),
     labels = list("view_counties"), sidebar = 4),
-  geo_links = list(list(
+  geo_links = geo_link_filter(
     display = "Counties",
     variable = "admin1_name",
-    cog_type = "cog_disp_filter",
-    ref_level = "counties",
-    type = "href"
-  )),
+    ref_level = "counties"
+  ),
   order = 2,
   # max_date = as.Date("2020-06-17"),
   min_date = as.Date("2020-03-01"),
