@@ -8,6 +8,8 @@ on:
 jobs:
   run-buildapp:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     name: Run App Builder
     steps:
       - name: Checkout
