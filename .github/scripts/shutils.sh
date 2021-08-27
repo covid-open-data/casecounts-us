@@ -9,7 +9,7 @@ installAptPackages() {
       # Ensure apt has been updated before any packages are installed.
       if [ -z "${APT_GET_UPDATED}" ]; then
         echo "Updating apt-get..."
-        apt-get update
+        apt-get update --allow-releaseinfo-change
         export APT_GET_UPDATED=1
       fi
 
