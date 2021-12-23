@@ -2,34 +2,34 @@ __loadDisplayList__8290dcb6([
   {
     "group": "common",
     "name": "Counties",
-    "desc": "Covid-19 cases and deaths in the US by county - updated 2021-12-22 10:24 UTC",
+    "desc": "Covid-19 cases and deaths in the US by county - updated 2021-12-23 10:24 UTC",
     "n": 3142,
     "order": 3,
     "height": 416,
     "width": 500,
-    "updated": "2021-12-22 10:47:26",
+    "updated": "2021-12-23 10:45:47",
     "keySig": "c6d9a166d40ae2bc474237b3a9ebe493"
   },
   {
     "group": "common",
     "name": "States",
-    "desc": "Covid-19 cases and deaths in the US by state - updated 2021-12-22 10:24 UTC",
+    "desc": "Covid-19 cases and deaths in the US by state - updated 2021-12-23 10:24 UTC",
     "n": 51,
     "order": 2,
     "height": 416,
     "width": 500,
-    "updated": "2021-12-22 10:24:41",
+    "updated": "2021-12-23 10:24:35",
     "keySig": "c0f1951a4a12941719c7499b69c2ec0a"
   },
   {
     "group": "common",
     "name": "United_States",
-    "desc": "Covid-19 cases and deaths in the US - updated 2021-12-22 10:24 UTC",
+    "desc": "Covid-19 cases and deaths in the US - updated 2021-12-23 10:24 UTC",
     "n": 1,
     "order": 1,
     "height": 416,
     "width": 500,
-    "updated": "2021-12-22 10:24:17",
+    "updated": "2021-12-23 10:24:13",
     "keySig": "9c87051166d3e9a4dbc8368ef91696ae"
   }
 ])
